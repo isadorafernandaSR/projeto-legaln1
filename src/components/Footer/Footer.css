@@ -1,0 +1,46 @@
+/* ===== FLEX 5: rodapé =====
+       Mesma ideia do cabeçalho: dois grupos, um em cada ponta. */
+       .rodape {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        max-width: var(--largura-max);
+        margin: 0 auto;
+        padding: 24px;
+        border-top: 1px solid var(--cor-borda);
+        font-size: 14px;
+        color: var(--cor-texto-suave);
+      }
+  
+      .redes {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+      }
+  
+      .redes a:hover {
+        color: var(--cor-texto);
+      }
+  
+      /* ===== Responsivo =====
+         Em telas menores, o grid vira 1 coluna e o menu quebra linha. */
+      @media (max-width: 720px) {
+        .grade-cards {
+          grid-template-columns: 1fr;
+        }
+  
+        .cabecalho {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+  
+        .hero {
+          padding: 48px 24px;
+        }
+  
+        .hero h1 {
+          font-size: 28px;
+        }
+    }
